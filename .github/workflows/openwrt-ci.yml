@@ -65,7 +65,7 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
+      uses: appleboy/ssh-action@master
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
     - name: Download package
