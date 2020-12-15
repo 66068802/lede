@@ -61,7 +61,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL openwrt
+        git clone $REPO_URL -b master openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     
     - name: SSH connection to Actions
